@@ -1,8 +1,8 @@
-name: District
+name: district
 version: 1.0.5
 appVersion: 4.9.5
 description: Web publishing platform for building district websites.
-icon: https://s3waas.gov.in/assets/images/District-Logo.png
+icon: https://s3waas.gov.in/assets/images/district-Logo.png
 keywords:
 - wordpress
 - cms
