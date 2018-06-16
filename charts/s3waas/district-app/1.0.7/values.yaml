@@ -1,10 +1,10 @@
-## Bitnami WordPress image version
+## Bitnami DistrictApp image version
 ## ref: https://hub.docker.com/r/bitnami/wordpress/tags/
 ##
 image:
-  # registry: docker.io
+  registry: docker.io
   repository: bitnami/wordpress
-  tag: 4.9.5
+  tag: 4.9.6
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
   ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images

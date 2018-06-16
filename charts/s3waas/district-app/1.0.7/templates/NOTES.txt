@@ -1,8 +1,8 @@
-1. Get the WordPress URL:
+1. Get the DistrictApp URL:
 
 {{- if .Values.ingress.enabled }}
 
-  You should be able to access your new WordPress installation through
+  You should be able to access your new DistrictApp installation through
 
   {{- range .Values.ingress.hosts }}
   {{ if .tls }}https{{ else }}http{{ end }}://{{ .name }}/admin
