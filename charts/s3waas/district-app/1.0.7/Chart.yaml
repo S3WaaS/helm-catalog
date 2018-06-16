@@ -1,8 +1,8 @@
-appVersion: 4.9.6
-description: Web publishing platform for building blogs and websites.
-engine: gotpl
-home: http://www.wordpress.com/
-icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+name: District
+version: 1.0.5
+appVersion: 4.9.5
+description: Web publishing platform for building district websites.
+icon: https://s3waas.gov.in/assets/images/District-Logo.png
 keywords:
 - wordpress
 - cms
@@ -11,10 +11,10 @@ keywords:
 - web
 - application
 - php
-maintainers:
-- email: containers@bitnami.com
-  name: bitnami-bot
-name: wordpress
+home: https://s3waas.gov.in/
 sources:
-- https://github.com/bitnami/bitnami-docker-wordpress
-version: 1.0.7
+- http://10.247.39.18/s3waas/application
+maintainers:
+- name: Subhransu Sekhar
+  email: subhransu.wsd@nic.in
+engine: gotpl
