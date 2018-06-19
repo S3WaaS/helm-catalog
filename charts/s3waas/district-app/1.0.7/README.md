@@ -1,6 +1,6 @@
-# WordPress
+# District Application
 
-[WordPress](https://wordpress.org/) is one of the most versatile open source content management systems on the market. A publishing platform for building blogs and websites.
+[District Application](https://s3waas.gov.in/) is one of the most versatile open source content management systems on the market. A publishing platform for building blogs and websites.
 
 ## TL;DR;
 
@@ -10,9 +10,9 @@ $ helm install stable/wordpress
 
 ## Introduction
 
-This chart bootstraps a [WordPress](https://github.com/bitnami/bitnami-docker-wordpress) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+This chart bootstraps a [District Application](https://github.com/bitnami/bitnami-docker-wordpress) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
-It also packages the [Bitnami MariaDB chart](https://github.com/kubernetes/charts/tree/master/stable/mariadb) which is required for bootstrapping a MariaDB deployment for the database requirements of the WordPress application.
+It also packages the [Bitnami MariaDB chart](https://github.com/kubernetes/charts/tree/master/stable/mariadb) which is required for bootstrapping a MariaDB deployment for the database requirements of the District Application application.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ To install the chart with the release name `my-release`:
 $ helm install --name my-release stable/wordpress
 ```
 
-The command deploys WordPress on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
+The command deploys District Application on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
 
 > **Tip**: List all releases using `helm list`
 
@@ -43,13 +43,13 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ## Configuration
 
-The following table lists the configurable parameters of the WordPress chart and their default values.
+The following table lists the configurable parameters of the District Application chart and their default values.
 
 | Parameter                            | Description                                | Default                                                    |
 | ------------------------------------ | ------------------------------------------ | ---------------------------------------------------------- |
-| `image.registry`                     | WordPress image registry                   | `docker.io`                                                |
-| `image.repository`                   | WordPress image name                       | `bitnami/wordpress`                                        |
-| `image.tag`                          | WordPress image tag                        | `{VERSION}`                                                |
+| `image.registry`                     | District Application image registry                   | `docker.io`                                                |
+| `image.repository`                   | District Application image name                       | `bitnami/wordpress`                                        |
+| `image.tag`                          | District Application image tag                        | `{VERSION}`                                                |
 | `image.pullPolicy`                   | Image pull policy                          | `Always` if `imageTag` is `latest`, else `IfNotPresent`    |
 | `image.pullSecrets`                  | Specify image pull secrets                 | `nil`                                                      |
 | `wordpressUsername`                  | User of the application                    | `user`                                                     |
@@ -81,7 +81,7 @@ The following table lists the configurable parameters of the WordPress chart and
 | `nodePorts.https`                    | Kubernetes https node port                 | `""`                                                       |
 | `healthcheckHttps`                   | Use https for liveliness and readiness     | `false`                                                    |
 | `ingress.enabled`                    | Enable ingress controller resource         | `false`                                                    |
-| `ingress.hosts[0].name`              | Hostname to your WordPress installation    | `wordpress.local`                                          |
+| `ingress.hosts[0].name`              | Hostname to your District Application installation    | `wordpress.local`                                          |
 | `ingress.hosts[0].path`              | Path within the url structure              | `/`                                                        |
 | `ingress.hosts[0].tls`               | Utilize TLS backend in ingress             | `false`                                                    |
 | `ingress.hosts[0].tlsSecret`         | TLS Secret (certificates)                  | `wordpress.local-tls-secret`                               |
@@ -106,7 +106,7 @@ $ helm install --name my-release \
     stable/wordpress
 ```
 
-The above command sets the WordPress administrator account username and password to `admin` and `password` respectively. Additionally, it sets the MariaDB `root` user password to `secretpassword`.
+The above command sets the District Application administrator account username and password to `admin` and `password` respectively. Additionally, it sets the MariaDB `root` user password to `secretpassword`.
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
 
@@ -118,7 +118,7 @@ $ helm install --name my-release -f values.yaml stable/wordpress
 
 ## Persistence
 
-The [Bitnami WordPress](https://github.com/bitnami/bitnami-docker-wordpress) image stores the WordPress data and configurations at the `/bitnami` path of the container.
+The [Bitnami District Application](https://github.com/bitnami/bitnami-docker-wordpress) image stores the District Application data and configurations at the `/bitnami` path of the container.
 
 Persistent Volume Claims are used to keep the data across deployments. This is known to work in GCE, AWS, and minikube.
 See the [Configuration](#configuration) section to configure the PVC or to disable persistence.
@@ -139,21 +139,21 @@ Note also if you disable MariaDB per above you MUST supply values for the `exter
 This chart provides support for ingress resources. If you have an
 ingress controller installed on your cluster, such as [nginx-ingress](https://kubeapps.com/charts/stable/nginx-ingress)
 or [traefik](https://kubeapps.com/charts/stable/traefik) you can utilize
-the ingress controller to serve your WordPress application.
+the ingress controller to serve your District Application application.
 
 To enable ingress integration, please set `ingress.enabled` to `true`
 
 ### Hosts
 
 Most likely you will only want to have one hostname that maps to this
-WordPress installation, however, it is possible to have more than one
+District Application installation, however, it is possible to have more than one
 host.  To facilitate this, the `ingress.hosts` object is an array.
 
 For each item, please indicate a `name`, `tls`, `tlsSecret`, and any
 `annotations` that you may want the ingress controller to know about.
 
-Indicating TLS will cause WordPress to generate HTTPS URLs, and
-WordPress will be connected to at port 443.  The actual secret that
+Indicating TLS will cause District Application to generate HTTPS URLs, and
+District Application will be connected to at port 443.  The actual secret that
 `tlsSecret` references do not have to be generated by this chart.
 However, please note that if TLS is enabled, the ingress record will not
 work until this secret exists.

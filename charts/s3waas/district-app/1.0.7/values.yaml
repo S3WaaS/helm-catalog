@@ -1,8 +1,8 @@
-## Bitnami WordPress image version
+## Bitnami District Application image version
 ## ref: https://hub.docker.com/r/bitnami/wordpress/tags/
 ##
 image:
-  # registry: docker.io
+  registry: docker.io
   repository: bitnami/wordpress
   tag: 4.9.5
   ## Specify a imagePullPolicy
@@ -17,55 +17,24 @@ image:
   # pullSecrets:
   #   - myRegistrKeySecretName
 
-## User of the application
-## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
-##
-wordpressUsername: user
+applicationTitle: "District Website"
+applicationAdminUser: admin
+applicationAdminEmail: noreply@s3waas.gov.in
+applicationAdminPassword: ""
+applicationMasterURL: http://master.ndcspcl1.awaas.gov.in
+applicationLanguageName: Hindi
+applicationLanguageCode: hi
+applicationLanguageLocale: hi_IN
+applicationThemeName: district-theme-2
+applicationURL: ""
+applicationAlias: ""
+applicationS3UploadsBucket: master
+applicationS3UploadsRegion: custom
+applicationS3UploadsEndpoint: https://static.s3waas.gov.in
+applicationS3UploadsCDNURL: https://cdn.s3waas.gov.in
+applicationLive: 0
+applicationHTTPS: "off"
 
-## Application password
-## Defaults to a random 10-character alphanumeric string if not set
-## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
-##
-# wordpressPassword:
-
-## Admin email
-## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
-##
-wordpressEmail: user@example.com
-
-## First name
-## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
-##
-wordpressFirstName: FirstName
-
-## Last name
-## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
-##
-wordpressLastName: LastName
-
-## Blog name
-## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
-##
-wordpressBlogName: User's Blog!
-
-## Table prefix
-## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
-##
-wordpressTablePrefix: wp_
-
-## Set to `yes` to allow the container to be started with blank passwords
-## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
-allowEmptyPassword: "yes"
-
-## SMTP mail delivery configuration
-## ref: https://github.com/bitnami/bitnami-docker-wordpress/#smtp-configuration
-##
-# smtpHost:
-# smtpPort:
-# smtpUser:
-# smtpPassword:
-# smtpUsername:
-# smtpProtocol:
 
 externalDatabase:
 ## All of these values are only used when mariadb.enabled is set to false

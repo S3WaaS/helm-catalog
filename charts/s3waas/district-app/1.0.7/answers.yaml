@@ -3,9 +3,23 @@ image.repository: bitnami/wordpress
 image.tag: 4.9.4
 mariadb.image.repository: bitnami/mariadb
 mariadb.image.tag: 10.1.32
-wordpressUsername: user
-wordpressPassword: null
-wordpressEmail: user@example.com
+applicationHTTPS: "off"
+applicationURL: ""
+applicationAlias: ""
+applicationLive: 0
+applicationCDN: 0
+applicationTitle: "District Website"
+applicationAdminUser: admin
+applicationAdminEmail: noreply@s3waas.gov.in
+applicationMasterURL: http://master.ndcspcl1.awaas.gov.in
+applicationLanguageName: Hindi
+applicationLanguageCode: hi
+applicationLanguageLocale: hi_IN
+applicationThemeName: district-theme-2
+applicationS3UploadsBucket: master
+applicationS3UploadsRegion: custom
+applicationS3UploadsEndpoint: https://static.s3waas.gov.in
+applicationS3UploadsCDNURL: https://cdn.s3waas.gov.in
 mariadb.enabled: true
 mariadb.mariadbDatabase: wordpress
 mariadb.mariadbUser: wordpress
